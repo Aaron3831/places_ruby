@@ -1,0 +1,21 @@
+<h1>Places</h1>
+<p>
+  Here are all your tasks:
+</p>
+<ul>
+  <% @places.each()do|place|%>
+  <li><%=place.place_input%></li>
+  <%end%>
+</ul>
+
+<p>
+  Put in another location
+</p>
+
+<form action="/places" method="post">
+  <label for="place_input">Task Description</label>
+  <input id="place_input" name="place_input" type="text">
+
+  <button type="submit">Add Task</button>
+
+</form>
